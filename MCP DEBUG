@@ -1,0 +1,48 @@
+
+/**
+ * Write a description of class MCP here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class MCP
+{
+    // instance variables - replace the example below with your own
+    private static String test = "test";
+
+    public static void main(String[] args) {
+        
+        // converts the string to an int so the if statement doesn't throw an error 
+        // found this idea on Google 
+        int [] a = new int[args.length];
+        
+        
+        // The phrase "You have no args" should display on the console
+        
+        // Input " "1" " to display message 
+        // You have to input it as a string so quotation marks are required. The string
+        // is then converted to an int
+        
+        // Checks to see if object a is larger than 0
+        if (a.length > 0){
+            System.out.println("You have no args");
+        }
+
+        // The phrase "they are equal" should display on the console
+        //Sould be "==" instead of "=". "=" is setting a variable while "==" is equal too
+        if (test == "test"){
+            System.out.println("They are equal");
+        }
+
+        // 0 through 9 should display on the console
+        // no need for a break, the loop will end when the condition is met
+        for (int i = 0; i<10; i++){
+
+            System.out.println(i);
+            //break;
+
+        }
+
+		
+    }
+}
