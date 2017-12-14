@@ -1,0 +1,66 @@
+import java.io.*;
+import java.util.*;
+
+public class Anagram
+{
+    public static void main(String [] args)
+    {
+        int count = args.length;
+
+        if(count <2)
+        {
+
+            throw new IllegalArgumentException("You need at least 2 input parameter");
+
+        }
+        if(count >2)
+        {
+            throw new IllegalArgumentException("You can only have two input parameters");
+
+        }
+        String s1 = args[0];
+        String s2 = args[1];
+
+        //Removing all white spaces from s1 and s2
+        String copyOfs1 = s1.replaceAll("\\s", "");
+        String copyOfs2 = s2.replaceAll("\\s", "");
+        //Set status too true
+        boolean status = true;
+        if(copyOfs1.length() != copyOfs2.length())
+        {
+            //If the lengths are different then it can not be an anagram
+
+            status = false;
+        }
+        else
+        {
+            //ensure casing is not an issue
+
+            char[] s1Array = copyOfs1.toLowerCase().toCharArray();
+
+            char[] s2Array = copyOfs2.toLowerCase().toCharArray();
+
+            //Sorting both s1Array and s2Array
+
+            Arrays.sort(s1Array);
+
+            Arrays.sort(s2Array);
+
+            //Checking whether s1Array and s2Array are equal
+
+            status = Arrays.equals(s1Array, s2Array);
+        }
+
+        //Output findings 
+
+        if(status == true)
+        {
+            System.out.println("True");
+        }
+        else
+        {
+            System.out.println("False");
+        }
+    }
+
+}
